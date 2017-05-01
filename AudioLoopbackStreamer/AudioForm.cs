@@ -28,11 +28,13 @@ namespace AudioLoopbackStreamer
         {
             if (!_recording)
             {
+                goBtn.Text = "Stop";
                 statusLbl.Text = "status: yes";
 
                 _handler.StartRecording(_tcpStream);
             } else
             {
+                goBtn.Text = "Go";
                 statusLbl.Text = "status: no";
                 _handler.StopRecording();
             }
